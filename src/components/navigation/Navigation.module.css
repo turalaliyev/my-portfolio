@@ -1,0 +1,58 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  min-width: 250px;
+  width: 300px;
+  height: 100%;
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  background-color: black;
+}
+
+.image {
+  width: 90%;
+}
+
+.link {
+  height: 100px;
+}
+
+.linkButton {
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(0, 0, 0), #120e16);
+  color: white;
+  border: none;
+  height: 100%;
+  width: 100%;
+  transition: all ease-in 0.3s;
+}
+
+.linkButton:hover {
+  background: linear-gradient(90deg, #080709, #121212);
+  border-bottom: grey 1px solid;
+  border-top: grey 1px solid;
+  border-left: grey 1px solid;
+  transition: all ease-in 0.3s;
+}
+
+.active {
+  background: linear-gradient(90deg, #080709, #121212);
+  border-bottom: grey 1px solid;
+  border-top: grey 1px solid;
+  border-left: grey 1px solid;
+}
+
+.copyrightPolicy {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+  font-size: 13px;
+}
