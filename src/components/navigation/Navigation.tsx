@@ -1,49 +1,58 @@
 import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import logoImage from '../../images/TALogo.png';
 
 import styles from './Navigation.module.css';
 
-interface Props {
-  id: number | null;
-  handleClick: (num: number) => void;
-}
-
-const Navigation = (props: Props) => {
-  const links: string[] = ['About', 'Experience', 'Projects', 'Contact me'];
-
-  // Links button handler
-  const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    const button: HTMLButtonElement = event.currentTarget;
-    props.handleClick(+button.value);
-  };
-
-  const logoHandler = () => {
-    props.handleClick(4);
-  };
+const Navigation = () => {
+  let hlink = useLocation();
+  let link: string = hlink.pathname.toString();
 
   return (
     <div className={styles.navigation}>
-      <div className={styles.logo} onClick={logoHandler}>
-        <img src={logoImage} alt="/" className={styles.image} />
-        <h2>Software Developer</h2>
-      </div>
-      <div>
-        {links.map((link, i) => {
-          return (
-            <div className={styles.link}>
-              <button
-                className={`${styles.linkButton} ${
-                  props.id === i ? styles.active : undefined
-                }`}
-                value={i}
-                onClick={buttonHandler}
-              >
-                <h3>{link}</h3>
-              </button>
-            </div>
-          );
-        })}
+      <NavLink className={styles.navLinks} to="/">
+        <div className={styles.logo}>
+          <img src={logoImage} alt="logoImage" className={styles.image} />
+          <h2>Software Developer</h2>
+        </div>
+      </NavLink>
+      <div className={styles.links}>
+        <NavLink className={styles.navLinks} to="/about">
+          <div
+            className={`${styles.linkButton} ${
+              link === '/about' && styles.active
+            } `}
+          >
+            <h3>About</h3>
+          </div>
+        </NavLink>
+        <NavLink className={styles.navLinks} to="/experience">
+          <div
+            className={`${styles.linkButton} ${
+              link === '/experience' && styles.active
+            } `}
+          >
+            <h3>Experience</h3>
+          </div>
+        </NavLink>
+        <NavLink className={styles.navLinks} to="/projects">
+          <div
+            className={`${styles.linkButton} ${
+              link === '/projects' && styles.active
+            } `}
+          >
+            <h3>Projects</h3>
+          </div>
+        </NavLink>
+        <NavLink className={styles.navLinks} to="/contact">
+          <div
+            className={`${styles.linkButton} ${
+              link === '/contact' && styles.active
+            } `}
+          >
+            <h3>Contact Me</h3>
+          </div>
+        </NavLink>
       </div>
       <div className={styles.copyrightPolicy}>
         <p>Copyright © Tural Aliyev 2023</p>

@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import ContactMe from './components/ContactMe/ContactMe';
+import Experience from './components/Experience/Experience';
 import Navigation from './components/navigation/Navigation';
+import NotFound from './components/NotFound/NotFound';
 import Welcome from './components/Welcome/Welcome';
 
 import contentImage from './images/contentImage.png';
 
 function App() {
-  const [id, setId] = useState<number | null>(4);
-
-  const handleClick = (num: number) => {
-    setId(num);
-  };
-
   return (
-    <div className="App">
-      <Navigation id={id} handleClick={handleClick} />
-      <div className="content">
-        {id === 4 && <Welcome handleClick={handleClick} />}
-        {id === 0 && <About />}
+    <Router>
+      <div className="App">
+        <Navigation />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactMe />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/*" element={<NotFound />} />
+          </Routes>
+        </div>
+        <div className="imageContainer">
+          <img className="contentImage" src={contentImage} alt="contentImage" />
+        </div>
       </div>
-      <div className="imageContainer">
-        <img className="contentImage" src={contentImage} alt="/" />
-      </div>
-    </div>
+    </Router>
   );
 }
 

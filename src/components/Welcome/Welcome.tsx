@@ -1,16 +1,9 @@
 import React from 'react';
+import Button from '../UI/Button/Button';
 
 import styles from './Welcome.module.css';
 
-interface Props {
-  handleClick: (num: number) => void;
-}
-
-const Welcome = (props: Props) => {
-  const handleClick = () => {
-    props.handleClick(3);
-  };
-
+const Welcome = () => {
   return (
     <>
       <div className={styles.welcome}>
@@ -37,9 +30,7 @@ const Welcome = (props: Props) => {
         </div>
         <p>{`</html>`}</p>
       </div>
-      <button onClick={handleClick} className={styles.contactMeButton}>
-        Contact Me
-      </button>
+      <Button to="/about" text="About" />
     </>
   );
 };

@@ -1,42 +1,49 @@
 .navigation {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  min-width: 250px;
+  display: block;
+  background-color: #563727;
   width: 300px;
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
 }
 
 .logo {
-  cursor: pointer;
+  height: auto;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 200px;
-  background-color: black;
+  padding: 30px 0 10px 0;
+}
+
+.logo h2 {
+  text-align: center;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: white;
 }
 
 .image {
-  width: 90%;
+  width: 80%;
 }
 
-.link {
-  height: 100px;
+.links {
+  height: auto;
+  border-top: #372c2e 1px solid;
+  border-bottom: #372c2e 1px solid;
 }
 
 .linkButton {
-  cursor: pointer;
-  background: linear-gradient(90deg, rgb(0, 0, 0), #120e16);
-  color: white;
-  border: none;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
   transition: all ease-in 0.3s;
 }
 
 .linkButton:hover {
-  background: linear-gradient(90deg, #080709, #121212);
+  background: none;
+  background-color: #372c2e;
   border-bottom: grey 1px solid;
   border-top: grey 1px solid;
   border-left: grey 1px solid;
@@ -44,7 +51,8 @@
 }
 
 .active {
-  background: linear-gradient(90deg, #080709, #121212);
+  background: none;
+  background-color: #372c2e;
   border-bottom: grey 1px solid;
   border-top: grey 1px solid;
   border-left: grey 1px solid;
