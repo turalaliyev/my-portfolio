@@ -35,13 +35,13 @@ const Navigation = () => {
             <h3>Experience</h3>
           </div>
         </NavLink>
-        <NavLink className={styles.navLinks} to="/projects">
+        <NavLink className={styles.navLinks} to="/skills">
           <div
             className={`${styles.linkButton} ${
-              link === '/projects' && styles.active
+              link === '/skills' && styles.active
             } `}
           >
-            <h3>Projects</h3>
+            <h3>Skills</h3>
           </div>
         </NavLink>
         <NavLink className={styles.navLinks} to="/contact">

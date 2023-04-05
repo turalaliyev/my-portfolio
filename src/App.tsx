@@ -6,6 +6,7 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Experience from './components/Experience/Experience';
 import Navigation from './components/navigation/Navigation';
 import NotFound from './components/NotFound/NotFound';
+import Skills from './components/Skills/Skills';
 import Welcome from './components/Welcome/Welcome';
 
 import contentImage from './images/contentImage.png';
@@ -19,8 +20,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<ContactMe />} />
             <Route path="/experience" element={<Experience />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<ContactMe />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>

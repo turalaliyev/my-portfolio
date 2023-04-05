@@ -1,0 +1,67 @@
+.experience {
+  padding: 6rem 0 0 0;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.gridElement {
+  display: flex;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  border-radius: 18px;
+  background-color: #de9e48;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  color: #372c2e;
+  padding: 15px;
+  border: 1px solid #372c2e;
+  transition: all ease-in-out 0.5s;
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.card h4 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.details {
+  display: none;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.5s;
+}
+
+.card:hover .details {
+  display: block;
+  transition: all ease-in-out 0.5s;
+}
+
+/* .imageContainer {
+  height: 70px;
+  padding: 5px;
+  border-radius: 18px;
+  background-color: black;
+}
+
+.cardImage {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+} */
