@@ -1,0 +1,23 @@
+.skillsContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .skillsContainer {
+    flex-direction: column;
+  }
+}
+
+.skills {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects {
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+.skill {
+  margin: 0 8px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  border: 1px solid rgb(62, 62, 62);
+  border-radius: 50%;
+  transition: all ease-in-out 0.3s;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logoContainer:hover {
+  transform: scale(1.2);
+  background-color: rgb(62, 62, 62);
+  transition: all ease-in-out 0.3s;
+}

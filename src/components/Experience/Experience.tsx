@@ -1,65 +1,66 @@
 import React from 'react';
 
+import RD from '../../images/RD.svg';
+import EY from '../../images/EY.png';
+import Shopify from '../../images/Shopify.png';
+import Premiyera from '../../images/Premiyera.png';
+
 import styles from './Experience.module.css';
+import Button from '../UI/Button/Button';
 
 const Experience = () => {
   return (
     <>
       <div className={styles.experience}>
-        <div className={styles.grid}>
-          <div className={styles.gridElement}>
-            <div className={styles.card}>
+        {/* <h1>Experience</h1> */}
+        <div className={styles.experienceTable}>
+          <div className={styles.element}>
+            <div className={styles.imageContainer}>
+              <img
+                className={styles.image}
+                style={{ width: '220px', objectFit: 'cover' }}
+                src={RD}
+                alt="Ronwell Digital"
+              />
+            </div>
+            <div className={styles.description}>
               <h2>Ronwell Digital</h2>
-              <h4>Front-End Software Developer</h4>
-              <div className={styles.details}>
-                <p>
-                  Worked on “Ronwell Academy” project by creating user-friendly
-                  web-site with Vue.js. Mostly worked on setting up the design,
-                  additionally dealt with API requests for receiving data from
-                  the server.
-                </p>
-                <p>
-                  Worked on the design of the components with Figma and
-                  implementing it to the webpage.
-                </p>
-                <p>
-                  Designed components for the “Nifsy” project through Figma,
-                  like “Registration page”. “Nifsy” was an Online-Shop project.
-                </p>
-                <p>
-                  Administrated the Online-Shop by creating categories and
-                  adding the products to the webpage through the admin panel.
-                  Monitored various online-shops like “Namshi”, “Trendyol” for
-                  competition and market analysis.
-                </p>
-                <p>
-                  Participated in signing of a contract with “Fetchr” logistics
-                  company for the “Nifsy” project. Implemented the shipping
-                  policy and pricing, including taxes, into the system through
-                  the admin panel.
-                </p>
-              </div>
+              <h3>Frontend Software Developer {'&'} Webpage Administrator</h3>
             </div>
+            <p>May 2021 - January 2022</p>
           </div>
-          <div className={styles.gridElement}>
-            <div className={styles.card}>
-              <h2>BeezyStore</h2>
-              <h4>Product Manager</h4>
+          <div className={styles.element}>
+            <div className={styles.imageContainer}>
+              <img className={styles.image} src={EY} alt="Ernst {'&'} Young" />
             </div>
-          </div>
-          <div className={styles.gridElement}>
-            <div className={styles.card}>
-              <h2>Erns {'&'} Young</h2>
-              <h4>Intern</h4>
+            <div className={styles.description}>
+              <h2>Ernst {'&'} Young</h2>
+              <h3>IT Consulter Intern</h3>
             </div>
+            <p>July 2019 - September 2019</p>
           </div>
-          <div className={styles.gridElement}>
-            <div className={styles.card}>
+          <div className={styles.element}>
+            <div className={styles.imageContainer}>
+              <img className={styles.image} src={Shopify} alt="Shopify" />
+            </div>
+            <div className={styles.description}>
+              <h2>BeezyStore {'(Shopify Project)'}</h2>
+              <h3>Product Manager</h3>
+            </div>
+            <p>August 2020 - June 2021</p>
+          </div>
+          <div className={styles.element}>
+            <div className={styles.imageContainer}>
+              <img className={styles.image} src={Premiyera} alt="Premiyera" />
+            </div>
+            <div className={styles.description}>
               <h2>Premiyera</h2>
-              <h4>Customer Support</h4>
+              <h3>Human Support</h3>
             </div>
+            <p>June 2016 - August 2016</p>
           </div>
         </div>
+        <Button to="/skills" text="Skills" />
       </div>
     </>
   );
