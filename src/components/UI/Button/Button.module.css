@@ -13,8 +13,6 @@
   padding: var(--size-4) var(--size-8);
   transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
   transition: transform 0.1s;
-  position: absolute;
-  bottom: 40px;
 }
 
 .contactMeButton:hover {
