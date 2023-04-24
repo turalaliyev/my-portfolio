@@ -4,12 +4,17 @@
 
 .App {
   display: flex;
+  height: 100%;
+}
+
+.navigation {
+  display: block;
 }
 
 .content {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 30px;
 }
 

@@ -11,6 +11,12 @@
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .experienceTable {
+    grid-template-columns: 1fr;
+  }
+}
+
 .element {
   display: flex;
   flex-direction: column;

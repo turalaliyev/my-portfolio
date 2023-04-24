@@ -1,13 +1,13 @@
 .navigation {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #563727;
   width: 300px;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .logo {
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,9 @@
 }
 
 .links {
-  height: auto;
+  display: block;
+  justify-content: space-between;
+  height: 100%;
   border-top: #372c2e 1px solid;
   border-bottom: #372c2e 1px solid;
 }
@@ -37,7 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 25%;
   transition: all ease-in 0.3s;
 }
 

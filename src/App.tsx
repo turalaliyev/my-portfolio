@@ -9,13 +9,15 @@ import NotFound from './components/NotFound/NotFound';
 import Skills from './components/Skills/Skills';
 import Welcome from './components/Welcome/Welcome';
 
-import contentImage from './images/contentImage.png';
+// import contentImage from './images/contentImage.png';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navigation />
+        <div className="navigation">
+          <Navigation />
+        </div>
         <div className="content">
           <Routes>
             <Route path="/" element={<Welcome />} />
@@ -26,9 +28,9 @@ function App() {
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>
-        <div className="imageContainer">
+        {/* <div className="imageContainer">
           <img className="contentImage" src={contentImage} alt="contentImage" />
-        </div>
+        </div> */}
       </div>
     </Router>
   );
